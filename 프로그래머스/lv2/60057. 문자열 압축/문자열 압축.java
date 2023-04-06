@@ -22,7 +22,7 @@ class Solution {
     {
         count=0;
         StringBuilder sb=new StringBuilder();
-        splitString = s.split("(?<=\\G.{" + cut + "})");
+        splitString = s.split("(?<=\\G.{" + cut + "})"); //원하는 길이만큼 문자열 잘라서 배열에 넣기
         lengthArr=new int[splitString.length];
 
         for(int i=1;i<splitString.length;i++)
@@ -47,7 +47,7 @@ class Solution {
             if(lengthArr[i]!=0)
             {
                 sb.append(Integer.toString(lengthArr[i]+1));
-                Arrays.fill(splitString,i-lengthArr[i],i,"");
+                Arrays.fill(splitString,i-lengthArr[i],i,""); //배열 부분초기화***
             }
         }
 
