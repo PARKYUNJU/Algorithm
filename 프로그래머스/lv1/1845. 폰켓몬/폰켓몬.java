@@ -1,7 +1,7 @@
 import java.util.*;
 class Solution {
     public int solution(int[] nums) {
-       int choice=nums.length/2;
+        int choice=nums.length/2;
         int result=0;
         Map<Integer,Integer> map=new HashMap<>();
 
@@ -12,11 +12,11 @@ class Solution {
         }
 
         int size=map.size();
+        System.out.println(map);
         if(size>choice)
             result=choice;
         else
             result=size;
-        
         
         return result;
     }
